@@ -2,16 +2,22 @@ namespace FiveToSeven_Endpoints.Services
 {
     public class ReverseItNumericServices
     {
-        public string ReverseItNum(int num)
+        public string ReverseItNum(string num)
         {
-            int left = num;
-            int reverse = 0;
-            while(Convert.ToBoolean(left)){
-                int r = left % 10;
-                reverse = reverse * 10 + r;
-                left = left / 10;
+            int parsedNum;
+            bool numeric = int.TryParse(num, out parsedNum);
+            if(numeric == true){
+                int left = parsedNum;
+                int reverse = 0;
+                while(Convert.ToBoolean(left)){
+                    int r = left % 10;
+                    reverse = reverse * 10 + r;
+                    left = left / 10;
+                }
+                return $"Your number of '{parsedNum}' when reversed is '{reverse}'";
+            }else{
+                return $"error '{num}' is not a valid integer";
             }
-            return $"Your number of '{num}' when reversed is '{reverse}'";
         }
     }
 }

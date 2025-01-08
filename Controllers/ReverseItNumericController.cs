@@ -15,7 +15,7 @@ namespace FiveToSeven_Endpoints.Controllers
 
         [HttpGet]
         [Route("ReverseItNum/{num}")]
-        public string ReverseItNum(int num)
+        public string ReverseItNum(string num)
         {
             return _reverseItNumericServices.ReverseItNum(num);
         }
