@@ -15,7 +15,7 @@ namespace FiveToSeven_Endpoints.Controllers
 
         [HttpGet]
         [Route("OddOrEven/{num}")]
-        public string OddOrEven(int num)
+        public string OddOrEven(string num)
         {
             return _oddOrEvenServices.OddOrEven(num);
         }
