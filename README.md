@@ -21,6 +21,7 @@
  4. ReverseIt (Numbers Only): endpoint that accepts a sequence of only numbers and reverses them.  Be sure to display the original characters before the reversed.  For example:
       - "You entered 12345, reversed is 54321"
 
-*Reviewer's Name*:
+*Reviewer's Name*: Thao Vang
 
 *Peer Review*:
+"Logic for everything looks good. Only thing is that I think the OddOrEven and ReveresIt(NumbersOnly) needs validation. So instead of taking in an int, you should take in a string and TryParse it to see if it is a number or not and if not user gets a message that its not a nmber. Instead of just getting a 404 or 400 error on api side."
