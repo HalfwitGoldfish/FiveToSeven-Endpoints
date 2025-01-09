@@ -8,9 +8,9 @@ namespace FiveToSeven_Endpoints.Services
         {
             string reverse = "";
             for(int i = input.Length - 1; i >= 0; i--){
-                    reverse += input[i];
+                reverse += input[i];
             }
-            return new string($"Your input of '{input}' when reversed comes out as '{reverse}'");
+            return $"Your input of '{input}' when reversed comes out as '{reverse}'";
         }
     }
 }

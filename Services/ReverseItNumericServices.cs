@@ -6,18 +6,17 @@ namespace FiveToSeven_Endpoints.Services
         {
             int parsedNum;
             bool numeric = int.TryParse(num, out parsedNum);
-            if(numeric == true){
+            if(numeric){
                 int left = parsedNum;
                 int reverse = 0;
                 while(Convert.ToBoolean(left)){
                     int r = left % 10;
                     reverse = reverse * 10 + r;
-                    left = left / 10;
+                    left /= 10;
                 }
                 return $"Your number of '{parsedNum}' when reversed is '{reverse}'";
-            }else{
-                return $"error '{num}' is not a valid integer";
             }
+            return $"error '{num}' is not a valid integer";
         }
     }
 }

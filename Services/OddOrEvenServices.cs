@@ -6,15 +6,13 @@ namespace FiveToSeven_Endpoints.Services
         {
             int parsedNum;
             bool numeric = int.TryParse(num, out parsedNum);
-            if(numeric == true){
+            if(numeric){
                 if(parsedNum % 2 == 0){
                     return $"{parsedNum} is an even number";
-                }else{
-                    return $"{parsedNum} in an odd number";
                 }
-            }else{
-                return $"error '{num}' is not a valid integer";
+                return $"{parsedNum} in an odd number";
             }
+            return $"error '{num}' is not a valid integer";
         }
     }
 }
